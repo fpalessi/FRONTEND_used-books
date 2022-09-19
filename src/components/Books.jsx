@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Book from "./Book";
 import SearchBar from "./SearchBar";
+import Spinner from "./Spinner/Spinner";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -28,7 +29,7 @@ const Books = () => {
           Hubo un error
         </p>
       ) : null}
-      {loading ? "Fetching data ..." : null}
+      {loading ? <Spinner /> : null}
       <table className="table border border-info">
         <thead className="bg-info table-warning">
           <tr>
